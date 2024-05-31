@@ -45,7 +45,7 @@ CREATE TABLE `demander` (
 --
 
 INSERT INTO `demander` (`id`, `service`, `sujet`, `profile`, `date_de_début`, `date_dxpiration`, `email`, `status`, `email_encadrant`, `gs_confirm`) VALUES
-(4, 'gnbgfn', 'ngfn', 'ngf', '2024-05-22', '2024-05-22', 'fa@gmail.com', 1, 'riadh@gmail.com', NULL);
+(4, 'gnbgfn', 'ngfn', 'ngf', '2024-05-22', '2024-05-22', 'fa@gmail.com', 1, 'csh@gmail.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -98,10 +98,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `specialite`, `etablissement`, `diplome`, `statut`, `binome`, `statut_dencadrant`, `file`, `email_encadrant`) VALUES
 (1, 'admin', 'admin@gmail.com', '123', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, ''),
-(3, 'riadh', 'riadh@gmail.com', '123', 'encadrant', NULL, NULL, NULL, NULL, NULL, 1, NULL, ''),
-(5, 'hhhhhhhhhhhh', 'david@gmail.com', '123', '', 'hhhhhhhh', NULL, NULL, NULL, NULL, NULL, NULL, ''),
-(6, 'riadh coding', 'test@gmail.com', '123', 'gestionnaire', 'hhhhhhhhhhh', NULL, NULL, NULL, NULL, NULL, NULL, ''),
-(7, 'riadh hhhh', 'fa@gmail.com', '123', 'stagiaire', 'sp', 'et', 'deplom', 1, '', NULL, '1715988343.png', 'riadh@gmail.com');
+(3, 'riadh', 'rayou@gmail.com', '123', 'encadrant', NULL, NULL, NULL, NULL, NULL, 1, NULL, ''),
+(5, 'hhhhhhhhhhhh', 'test@gmail.com', '123', '', 'hhhhhhhh', NULL, NULL, NULL, NULL, NULL, NULL, ''),
+(6, 'riadh coding', 'main@gmail.com', '123', 'gestionnaire', 'hhhhhhhhhhh', NULL, NULL, NULL, NULL, NULL, NULL, ''),
+(7, 'riadh hhhh', 'fa@gmail.com', '123', 'stagiaire', 'sp', 'et', 'deplom', 1, '', NULL, '1715988343.png', 'main@gmail.com');
 
 --
 -- Indexes for dumped tables
