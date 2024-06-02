@@ -4,69 +4,6 @@ $page = "index";
 include_once "database/conn.php";
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-
-
-  if (isset($_POST['method'])) {
-    $method = $_POST['method'];
-  }
-
-  if (isset($_POST['id'])) {
-    $id = $_POST['id'];
-  }
-  if (isset($_POST['prix'])) {
-    $prix = $_POST['prix'];
-  }
-
-  if (isset($_POST['nom'])) {
-    $nom = $_POST['nom'];
-  }
-  if (isset($_POST['quantite'])) {
-    $quantite = $_POST['quantite'];
-  }
-  if (isset($_POST['old_quantité'])) {
-    $old_quantité = $_POST['old_quantité'];
-  }
-
-
-
-  $created = date("F j, Y, g:i a");
-  foreach ($id as $key => $value) {
-
-    $new = $old_quantité[$key] - $quantite[$key];
-
-    $update = mysqli_query($conn, "UPDATE `pharmaceutique` SET `quantité`='$new' WHERE id = '$id[$key]'");
-
-
-    $order_number = mt_rand(99999, 9999999);
-    $insert = mysqli_query($conn, "INSERT INTO `ventes`( `nom`, `quantite`, `prix`, `created`, `order_number`,`method`,`id_product`) 
-    VALUES ('$nom[$key]','$quantite[$key]','$prix[$key]','$created','$order_number','$method','$id[$key]')");
-    unset($_SESSION['cart']);
-    header('location:dashboard.php');
-  }
-
-
-
-
-
-
-
-
-
-
-  //$update = mysqli_query($conn,"UPDATE `pharmaceutique` SET `quantité`= '$quantite[$key]'  WHERE id = '$id[$key]'");
-
-
-
-
-
-
-
-}
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
